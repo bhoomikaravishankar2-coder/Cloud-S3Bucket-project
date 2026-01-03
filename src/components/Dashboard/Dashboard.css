@@ -1,0 +1,251 @@
+/* =====================
+   GENERAL LAYOUT
+===================== */
+.org-dashboard {
+  display: flex;
+  height: 100vh;
+  background-color: #f7f9fb;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* =====================
+   SIDEBAR STYLING
+===================== */
+.sidebar {
+  width: 250px;
+  background-color: #0d1b2a;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h3 {
+  font-size: 18px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.sidebar button {
+  background-color: transparent;
+  border: none;
+  color: #ccc;
+  text-align: left;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.sidebar button:hover {
+  background-color: #1b263b;
+  color: #fff;
+}
+
+.sidebar button.active {
+  background-color: #2ecc71;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* =====================
+   CONTENT AREA
+===================== */
+.content-area {
+  flex: 1;
+  padding: 30px 50px;
+  overflow-y: auto;
+}
+
+.content-area h2 {
+  margin-bottom: 20px;
+  color: #14213d;
+}
+
+.content-area section {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* =====================
+   PROJECT FORM
+===================== */
+.project-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.project-form input,
+.project-form textarea,
+.project-form select {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  width: 100%;
+}
+
+.project-form button {
+  background-color: #2ecc71;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.project-form button:hover {
+  background-color: #27ae60;
+}
+
+/* =====================
+   PROJECT LIST
+===================== */
+.project-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-card {
+  background: #f9fbfd;
+  border: 1px solid #d6e0f0;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  transition: all 0.2s ease;
+}
+
+.project-card:hover {
+  background: #eef5ff;
+  transform: translateY(-2px);
+}
+
+.project-card h4 {
+  color: #1b263b;
+  margin-bottom: 5px;
+}
+
+.project-card p {
+  margin: 4px 0;
+  color: #333;
+  font-size: 14px;
+}
+
+/* =====================
+   COLLAPSIBLE SECTION
+===================== */
+.detailed-card {
+  border-left: 4px solid #007bff;
+  margin-bottom: 20px;
+}
+
+.project-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #eaf2ff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.project-header:hover {
+  background-color: #dce9ff;
+}
+
+.project-header h3 {
+  color: #14213d;
+  margin: 0;
+}
+
+.status-line {
+  color: #333;
+  font-weight: 600;
+}
+
+.toggle-text {
+  color: #007bff;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.expand-section {
+  padding: 20px;
+  background-color: #fdfdfd;
+  border-top: 1px solid #ddd;
+  border-radius: 0 0 8px 8px;
+  animation: expandFade 0.3s ease;
+}
+
+@keyframes expandFade {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =====================
+   VOLUNTEER TABLE
+===================== */
+.volunteer-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.volunteer-table th,
+.volunteer-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.volunteer-table th {
+  background-color: #f0f3f6;
+  color: #222;
+  font-weight: 600;
+}
+
+.volunteer-table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.volunteer-table tr:hover {
+  background-color: #eef5ff;
+}
+
+.no-applicants {
+  color: #777;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* =====================
+   SCROLLBAR (optional)
+===================== */
+.content-area::-webkit-scrollbar {
+  width: 8px;
+}
+
+.content-area::-webkit-scrollbar-thumb {
+  background-color: #bbb;
+  border-radius: 4px;
+}

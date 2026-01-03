@@ -1,0 +1,24 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #2c3e50;
+  color: white;
+  padding: 10px 20px;
+}
+.navbar a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+}
+.navbar a:hover {
+  text-decoration: underline;.nav-links a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+}
